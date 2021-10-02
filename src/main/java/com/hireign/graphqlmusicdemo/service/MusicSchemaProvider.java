@@ -66,6 +66,8 @@ public class MusicSchemaProvider {
                 .type(newTypeWiring("Query")
                         .dataFetcher("findAllSongs", songDataFetcher.findAllSongs())
                         .dataFetcher("findAllArtists", artistDataFetcher.findAllArtists()))
+                .type(newTypeWiring("Song")
+                        .dataFetcher("artist", songDataFetcher.findArtistByName()))
                 .build();
     }
 }
