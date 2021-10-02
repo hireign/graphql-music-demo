@@ -1,3 +1,4 @@
-graphql.url: /query
+server:
+  port: 8080
 
-server.port: 8080
+graphql.url: /query
