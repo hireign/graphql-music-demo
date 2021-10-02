@@ -1,0 +1,3 @@
+graphql.url: /query
+
+server.port: 8080
