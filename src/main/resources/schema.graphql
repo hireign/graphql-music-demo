@@ -1,0 +1,30 @@
+scalar Long
+
+type Song {
+    id: ID!
+    title: String
+    artistName: String
+    albumName: String
+}
+
+type Artist {
+    id: ID!
+    name: String
+    songs: [String]
+    albums: [String]
+}
+
+type Query {
+    findAllSongs: [Song]
+    findAllArtists: [Artist]
+}
+
+type Mutation {
+    saveSong(title: String, artistName: String, albumName: String): Song
+    saveArtist(name: String, songs: [String], albums: [String]): Song
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
