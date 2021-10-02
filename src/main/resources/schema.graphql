@@ -5,6 +5,7 @@ type Song {
     title: String
     artistName: String
     albumName: String
+    artist: Artist
 }
 
 type Artist {
